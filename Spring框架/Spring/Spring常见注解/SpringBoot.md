@@ -1,0 +1,3 @@
++ @SpringBootConfiguration
++ @EnableAutoConfiguration
++ @Componentscan

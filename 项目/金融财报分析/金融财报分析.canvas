@@ -1,0 +1,41 @@
+{
+	"nodes":[
+		{"id":"f3842226ba5aadd2","type":"file","file":"项目/金融财报分析/金融财报分析系统.md","x":-80,"y":-260,"width":738,"height":400},
+		{"id":"cc5a0923692d6ffa","type":"text","text":"智能RAG系统","x":900,"y":-440,"width":160,"height":50},
+		{"id":"849c0486022b2802","type":"text","text":"# advisor-executor多轮检索\n传统RAG可能会存在单次检索覆盖不了复杂问题具有多重语义的情况。\n\n单次检索覆盖不了复杂，本质是**缺少中间信息的连接过程**，所以我基于ReAct设计了advisor-executor多轮检索，从而提升多跳问题的处理能力。\n\n比如：`金山办公和中科曙光在2024年的年度营业收入差`和 `金山办公2024年第三季度经营情况分析`(营业收入、经营活动现金流量净额、净利润、投资情况)\n\n单轮检索rag的结果可能会偏向某一侧，模型缺少关键答案支撑，最后输出的结果泛泛而谈。\nAdvisor + Execute 多轮检索可以通过不断补充证据缺口，最终对问题进行正确回答。","x":1240,"y":-760,"width":677,"height":350,"color":"3"},
+		{"id":"515df4554a4d86ee","type":"file","file":"项目/金融财报分析/介绍一下项目.md","x":-146,"y":-1030,"width":871,"height":620},
+		{"id":"0494d0aedaae0529","type":"file","file":"agent基础/agentic workflow.md","x":1240,"y":-320,"width":677,"height":400},
+		{"id":"b765dea689df0ee2","type":"text","text":"记忆机制","x":900,"y":320,"width":120,"height":50},
+		{"id":"f49e7ed2bf07890f","type":"file","file":"项目/金融财报分析/记忆机制/长期记忆和短期记忆长度如何确定？.md","x":1340,"y":440,"width":697,"height":310,"color":"4"},
+		{"id":"9a45af8098a6e44a","type":"file","file":"项目/金融财报分析/记忆机制/为什么短期记忆使用redis.md","x":1350,"y":210,"width":677,"height":135,"color":"3"},
+		{"id":"ba2aa254d9b62635","type":"file","file":"项目/金融财报分析/混合检索/为什么要用余弦相似度匹配？用欧式距离不行？.md","x":-1220,"y":-540,"width":600,"height":154},
+		{"id":"ee46b471bf5387fc","type":"file","file":"项目/金融财报分析/混合检索/向量化之前为什么要对长文档进行切片？.md","x":-1220,"y":-339,"width":600,"height":134},
+		{"id":"73a279e67e65e302","type":"file","file":"项目/金融财报分析/混合检索/文档更新、删除以及引用.md","x":-1220,"y":-160,"width":600,"height":100},
+		{"id":"f441f9be4e1cb4bd","type":"text","text":"混合检索策略","x":-431,"y":-366,"width":148,"height":55},
+		{"id":"a5acdc62c284e707","type":"text","text":"MCP协议","x":-431,"y":180,"width":148,"height":55},
+		{"id":"1766b70997d8d23f","type":"file","file":"agent基础/工具调用/区别辨析/MCP 、Skill、prompt.md","x":-1246,"y":377,"width":653,"height":243},
+		{"id":"7914ff0c198d3dc5","type":"text","text":"主流设计","x":1340,"y":1213,"width":160,"height":50},
+		{"id":"d88b151c1e83b50c","type":"file","file":"agent基础/记忆机制/如何设计记忆机制.md","x":1720,"y":840,"width":400,"height":320,"color":"4"},
+		{"id":"2ccecc3de97166e0","type":"file","file":"agent基础/agent工具/openclaw/记忆机制.md","x":1720,"y":1213,"width":400,"height":265,"color":"3"},
+		{"id":"df1ab4510c01c715","type":"file","file":"agent基础/agent工具/cloude code/记忆机制.md","x":1720,"y":1520,"width":400,"height":340,"color":"3"}
+	],
+	"edges":[
+		{"id":"acc0023166bfb0c1","fromNode":"f3842226ba5aadd2","fromSide":"right","toNode":"cc5a0923692d6ffa","toSide":"left"},
+		{"id":"4e35a13373510fc0","fromNode":"cc5a0923692d6ffa","fromSide":"right","toNode":"849c0486022b2802","toSide":"left"},
+		{"id":"3c41a0340b356540","fromNode":"f3842226ba5aadd2","fromSide":"top","toNode":"515df4554a4d86ee","toSide":"bottom"},
+		{"id":"1faddde98c0a9102","fromNode":"cc5a0923692d6ffa","fromSide":"right","toNode":"0494d0aedaae0529","toSide":"left"},
+		{"id":"525a66232c528361","fromNode":"f3842226ba5aadd2","fromSide":"right","toNode":"b765dea689df0ee2","toSide":"left"},
+		{"id":"68dfe1d4dc59913b","fromNode":"b765dea689df0ee2","fromSide":"right","toNode":"7914ff0c198d3dc5","toSide":"left"},
+		{"id":"5238ee5030ad8be7","fromNode":"7914ff0c198d3dc5","fromSide":"right","toNode":"d88b151c1e83b50c","toSide":"left"},
+		{"id":"d440bcf859a4700b","fromNode":"7914ff0c198d3dc5","fromSide":"right","toNode":"2ccecc3de97166e0","toSide":"left"},
+		{"id":"3befaf156e06dc51","fromNode":"7914ff0c198d3dc5","fromSide":"right","toNode":"df1ab4510c01c715","toSide":"left"},
+		{"id":"a7c0181a84ff5298","fromNode":"b765dea689df0ee2","fromSide":"right","toNode":"9a45af8098a6e44a","toSide":"left"},
+		{"id":"7a87a02979c85378","fromNode":"b765dea689df0ee2","fromSide":"right","toNode":"f49e7ed2bf07890f","toSide":"left"},
+		{"id":"3d1660b6d8c43ad7","fromNode":"f3842226ba5aadd2","fromSide":"left","toNode":"f441f9be4e1cb4bd","toSide":"right"},
+		{"id":"7d33f1bc21004330","fromNode":"f441f9be4e1cb4bd","fromSide":"left","toNode":"ba2aa254d9b62635","toSide":"right"},
+		{"id":"1d19401d05772569","fromNode":"f441f9be4e1cb4bd","fromSide":"left","toNode":"ee46b471bf5387fc","toSide":"right"},
+		{"id":"2d5f45c3835d50a8","fromNode":"f441f9be4e1cb4bd","fromSide":"left","toNode":"73a279e67e65e302","toSide":"right"},
+		{"id":"fcadb624a5e4e77c","fromNode":"f3842226ba5aadd2","fromSide":"left","toNode":"a5acdc62c284e707","toSide":"right"},
+		{"id":"a145f6609b88a2f6","fromNode":"a5acdc62c284e707","fromSide":"left","toNode":"1766b70997d8d23f","toSide":"right"}
+	]
+}

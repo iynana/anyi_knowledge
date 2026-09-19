@@ -1,0 +1,3 @@
+- 务必在不再使用时调用 `remove()` 方法，尤其在使用了线程池的环境中，因为线程复用会导致 ThreadLocal 中的值一直存在，无法被回收。
+- 避免使用ThreadLocal存储**大对象**，因为其生命周期与线程绑定，可能长期占用内存。
+- ThreadLocal变量应定义为 `static`，所有线程共享一个threadlocal实例（但要注意，static的ThreadLocal本身不会被回收，但其值可能因线程存活而存在）。

@@ -1,0 +1,9 @@
++ cd
++ pwd
++ ll或ls
++ mkdir
++ rm
++ cp
++ vim
++ kill
++ find

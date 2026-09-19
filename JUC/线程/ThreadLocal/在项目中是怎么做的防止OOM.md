@@ -1,0 +1,3 @@
+- 在使用ThreadLocal的代码块结束后，主动调用 `ThreadLocal.remove()` 清理。
+- 使用try-finally块确保移除操作一定执行。
+- 对于Web应用，在拦截器或过滤器中统一处理，在请求结束后清除当前线程的ThreadLocal。

@@ -1,0 +1,35 @@
+{
+	"nodes":[
+		{"id":"5982020183492ca4","type":"text","text":"# 应用层","x":1320,"y":206,"width":141,"height":60},
+		{"id":"9e7bbe16471d78bc","type":"file","file":"计算机网络/应用层/https与http的区别.md","x":1714,"y":300,"width":400,"height":400,"color":"4"},
+		{"id":"618c6a774cdf164d","type":"file","file":"计算机网络/应用层/POST和GET请求的区别.md","x":1714,"y":760,"width":400,"height":120,"color":"4"},
+		{"id":"c88ec330975de0c9","type":"file","file":"计算机网络/应用层/DNS解析过程.md","x":720,"y":360,"width":400,"height":400,"color":"4"},
+		{"id":"db1d9f79ad77457a","type":"text","text":"# 传输层","x":856,"y":1837,"width":129,"height":60},
+		{"id":"38246ffb469df2c6","type":"file","file":"计算机网络/应用层/HTTP各版本差异.md","x":721,"y":-580,"width":400,"height":240,"color":"3"},
+		{"id":"eb837c0f13f59f42","type":"file","file":"计算机网络/应用层/http状态码.md","x":1714,"y":-164,"width":400,"height":400,"color":"4"},
+		{"id":"b00ade015ef407de","type":"file","file":"计算机网络/应用层/键入网址到网页显示，期间发生了什么？.md","x":720,"y":-161,"width":400,"height":334,"color":"4"},
+		{"id":"f8ccb878ba23757e","type":"file","file":"计算机网络/网络层/APR协议.md","x":240,"y":140,"width":400,"height":254,"color":"4"},
+		{"id":"c2835f3bbe41a416","type":"file","file":"计算机网络/传输层/两个包通过TCP传输，要实现无损，按顺序，安全，你会怎么设计？.md","x":280,"y":1942,"width":400,"height":253,"color":"4"},
+		{"id":"fe408016097bc97f","type":"file","file":"计算机网络/传输层/TCP/TCP三次握手.md","x":-120,"y":1360,"width":400,"height":400,"color":"4"},
+		{"id":"3c0ca8bf767039ef","type":"file","file":"计算机网络/传输层/TCP/TCP四次挥手.md","x":280,"y":1360,"width":400,"height":400,"color":"4"},
+		{"id":"aa7653ddca683cc8","type":"file","file":"计算机网络/传输层/TCP/TCP可靠传输.md","x":1200,"y":1120,"width":400,"height":400,"color":"4"},
+		{"id":"306b35f9d5519265","type":"file","file":"计算机网络/传输层/TCP与UDP的主要区别与应用场景.md","x":1200,"y":2120,"width":400,"height":400,"color":"4"},
+		{"id":"392fd0bbc51cac8f","type":"file","file":"计算机网络/传输层/TCP/TCP粘包、拆包.md","x":1200,"y":1636,"width":400,"height":403,"color":"4"},
+		{"id":"189446a97fd18493","type":"file","file":"计算机网络/应用层/http报文结构.md","x":1714,"y":-540,"width":400,"height":295,"color":"4"}
+	],
+	"edges":[
+		{"id":"add8131959dd37da","fromNode":"db1d9f79ad77457a","fromSide":"right","toNode":"aa7653ddca683cc8","toSide":"left"},
+		{"id":"be431124ae1ee24b","fromNode":"db1d9f79ad77457a","fromSide":"right","toNode":"392fd0bbc51cac8f","toSide":"left"},
+		{"id":"9d27c840ad69e387","fromNode":"db1d9f79ad77457a","fromSide":"right","toNode":"306b35f9d5519265","toSide":"left"},
+		{"id":"2f1dc39f3eacc001","fromNode":"5982020183492ca4","fromSide":"right","toNode":"eb837c0f13f59f42","toSide":"left"},
+		{"id":"969603de151649b9","fromNode":"5982020183492ca4","fromSide":"right","toNode":"9e7bbe16471d78bc","toSide":"left"},
+		{"id":"51d63337188c4d44","fromNode":"5982020183492ca4","fromSide":"right","toNode":"618c6a774cdf164d","toSide":"left"},
+		{"id":"1a9d2f93552bd424","fromNode":"5982020183492ca4","fromSide":"left","toNode":"b00ade015ef407de","toSide":"right"},
+		{"id":"7e5525740c5fb84b","fromNode":"5982020183492ca4","fromSide":"left","toNode":"c88ec330975de0c9","toSide":"right"},
+		{"id":"12c9322f69ddd5c3","fromNode":"db1d9f79ad77457a","fromSide":"left","toNode":"c2835f3bbe41a416","toSide":"right"},
+		{"id":"3ad901380afa71b1","fromNode":"b00ade015ef407de","fromSide":"left","toNode":"f8ccb878ba23757e","toSide":"right"},
+		{"id":"ea14f428c961f00a","fromNode":"5982020183492ca4","fromSide":"right","toNode":"189446a97fd18493","toSide":"left"},
+		{"id":"54d4e860c8a977f8","fromNode":"5982020183492ca4","fromSide":"left","toNode":"38246ffb469df2c6","toSide":"right"},
+		{"id":"f14ed37f4820c8c6","fromNode":"db1d9f79ad77457a","fromSide":"left","toNode":"3c0ca8bf767039ef","toSide":"right"}
+	]
+}

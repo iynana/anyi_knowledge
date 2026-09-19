@@ -1,0 +1,1 @@
+ JDK 原生的提供的一个类，继承自 `ThreadLocal` 。使用 `InheritableThreadLocal` 时，会在创建子线程时，令==子线程继承父线程中的 `ThreadLocal` 值==，但是无法支持线程池场景下的 `ThreadLocal` 值传递。

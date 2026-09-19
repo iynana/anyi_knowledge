@@ -1,0 +1,1 @@
+LinkedHashMap = HashMap + 双向链表
