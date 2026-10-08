@@ -9,10 +9,10 @@
 		{"id":"ee040144c2653a6d","type":"file","file":"项目/美食优选平台/秒杀处理/问题杂项/同步改成异步指标优化在哪？.md","x":520,"y":-920,"width":400,"height":400,"color":"3"},
 		{"id":"a055cf50aee7d72e","type":"text","text":"缓存设计","x":-80,"y":-110,"width":120,"height":50},
 		{"id":"d0bbb5054c185351","type":"text","text":"**部署方案**：\n利用`docker`，将前端部署在`nginx`容器上，后端部署将`java`程序打包为`jar`，放入`java`容器。\n用户访问时，请求会先到`nginx`，静态资源由`nginx`直接返回，接口请求再由`nginx`反向代理到后端服务。\n\n**阿里云 OSS 和服务器的关系?**\n+ OSS负责文件存储，服务器根据url获取文件数据，进行业务逻辑。\n浏览器同源策略\n+ 限制不同来源之间的资源访问，防止恶意网站访问其他网站窃取用户数据。\n+ 同源：协议、域名、端口\n\n**如何解决浏览器跨域问题**\n+ nignx反向代理","x":474,"y":881,"width":586,"height":439,"color":"1"},
-		{"id":"32d9936e64b14bc9","type":"file","file":"项目/美食优选平台/秒杀处理/Kafka/消息机制/消息不丢失.md","x":2183,"y":-1559,"width":795,"height":400,"color":"4"},
-		{"id":"574f3e9c980ff942","type":"file","file":"项目/美食优选平台/秒杀处理/Kafka/消息机制/消息不重复消费.md","x":2183,"y":-1099,"width":795,"height":260,"color":"4"},
-		{"id":"ffce4dce612029b6","type":"file","file":"项目/美食优选平台/秒杀处理/Kafka/消息机制/消息堆积.md","x":2183,"y":-789,"width":795,"height":220,"color":"3"},
-		{"id":"3ccefc4637ea6e3a","type":"file","file":"项目/美食优选平台/秒杀处理/Kafka/消息机制/消息顺序消费.md","x":2183,"y":-509,"width":795,"height":262,"color":"3"},
+		{"id":"32d9936e64b14bc9","type":"file","file":"Kafka/消息机制/消息不丢失.md","x":2183,"y":-1559,"width":795,"height":400,"color":"4"},
+		{"id":"574f3e9c980ff942","type":"file","file":"Kafka/消息机制/消息不重复消费.md","x":2183,"y":-1099,"width":795,"height":260,"color":"4"},
+		{"id":"ffce4dce612029b6","type":"file","file":"Kafka/消息机制/消息堆积.md","x":2183,"y":-789,"width":795,"height":220,"color":"3"},
+		{"id":"3ccefc4637ea6e3a","type":"file","file":"Kafka/消息机制/消息顺序消费.md","x":2183,"y":-509,"width":795,"height":262,"color":"3"},
 		{"id":"aa871e8584a60816","type":"file","file":"项目/美食优选平台/秒杀处理/问题杂项/库存扣减和订单创建是在同一个消费组里处理吗？如果其中一步失败了呢怎么回滚？.md","x":2140,"y":-175,"width":620,"height":360,"color":"3"},
 		{"id":"8077145369be8f94","type":"file","file":"项目/美食优选平台/秒杀处理/问题杂项/redis中lua脚本执行时间过长，会阻塞主线程，如何控制脚本执行复杂度和耗时？.md","x":2140,"y":220,"width":620,"height":160,"color":"3"},
 		{"id":"c77f2381a4a8b19b","type":"file","file":"项目/美食优选平台/秒杀处理/问题杂项/一人N单如何处理？.md","x":2140,"y":420,"width":620,"height":110,"color":"3"},
@@ -44,7 +44,7 @@
 		{"id":"95438699c4930218","type":"file","file":"项目/美食优选平台/系统限流/刷券请求的特征是什么？怎么限流？.md","x":-1019,"y":1193,"width":546,"height":400,"color":"3"},
 		{"id":"99ca6f732af614d1","type":"file","file":"项目/美食优选平台/系统限流/四种限流算法.md","x":-1019,"y":1653,"width":546,"height":687,"color":"3"},
 		{"id":"b161ebb417594fb8","type":"file","file":"项目/美食优选平台/缓存设计/Caffine/Caffine.md","x":-1580,"y":-1940,"width":823,"height":415,"color":"1"},
-		{"id":"7aaacd407bb3597b","type":"file","file":"项目/美食优选平台/秒杀处理/Kafka/消费者组广播消费.md","x":2183,"y":-1880,"width":795,"height":228,"color":"3"},
+		{"id":"7aaacd407bb3597b","type":"file","file":"Kafka/消费者组广播消费.md","x":2183,"y":-1880,"width":795,"height":228,"color":"3"},
 		{"id":"4e6c3ecdbe81d99f","type":"file","file":"项目/美食优选平台/缓存设计/问题杂项/多节点情况下，如何保证本地缓存一致性？.md","x":-1569,"y":-260,"width":823,"height":140,"color":"3"}
 	],
 	"edges":[

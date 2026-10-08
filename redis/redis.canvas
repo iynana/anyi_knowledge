@@ -33,7 +33,7 @@
 		{"id":"868d89a04816479f","type":"text","text":"**介绍一下哨兵模式**\n+ **监控**：通过心跳请求监控Redis主从节点是否存活\n+ **自动故障恢复**：在主节点挂了之后，推举新主节点\n+ **通知**：充当redis客户端的服务发现来源，通知客户端最新的redis信息","x":1700,"y":760,"width":319,"height":229,"color":"4"},
 		{"id":"e55abec7b31ab0fb","type":"text","text":"**介绍一下集群模式**\n+ **特征**：多主节点，每个主节点存储不同哈希槽slot的数据，且每个主节点有多个从节点\n+ **监测**：集群内部之间都用心跳机制监测对方的状态","x":1560,"y":1280,"width":339,"height":200,"color":"3"},
 		{"id":"edecfe593dded36f","type":"text","text":"**如何实现数据分片？**\n+ 集群中有16348个哈希槽，利用CRC算法对key计算后取模\n+ 为主节点分配哈希槽\n+ 客户端可以连接任意节点，节点会计算槽位，如果不一致会重定位","x":1560,"y":1500,"width":339,"height":200,"color":"4"},
-		{"id":"0aa149c321e3fc27","type":"text","text":"**为什么是data->slot->node，而不是data->node？**\n实现==节点与数据解耦==，实现高效的数据重分布和水平扩展。\n+ 集群伸缩时不需要重新计算hash，所有数据全部改变位置，只需要分配一下slot槽就行","x":1560,"y":1720,"width":339,"height":220,"color":"4"},
+		{"id":"0aa149c321e3fc27","type":"text","text":"**为什么是data->slot->node，而不是data->node？**\n实现==节点与数据解耦==，实现高效的数据重分布和水平扩展。\n+ 集群伸缩时不需要重新计算hash，所有数据全部改变位置，只需要分配一下slot槽就行\n\n**分片与副本策略注意点**\n+ **槽数均匀，不代表负载均匀**：某些槽可能包含大 Key 或热点 Key。\n+ Redis 采用**异步复制**，读副本可能读到旧数据，故障切换也存在丢失近期写入的窗口。因此，对读取新鲜度敏感的操作通常读主节点","x":1560,"y":1720,"width":339,"height":440,"color":"1"},
 		{"id":"f19fe0776bdfd3f5","type":"text","text":"脑裂","x":1810,"y":1210,"width":89,"height":60,"color":"4"},
 		{"id":"8515ce754d88826f","type":"text","text":"**优点**：\n+ 实现了数据分片，支持集群伸缩\n+ 实现了故障检测和自动恢复\n+ 写操作高并发","x":1930,"y":1860,"width":300,"height":160,"color":"4"},
 		{"id":"37122429e6972631","type":"file","file":"redis/key/大key问题.md","x":-177,"y":1140,"width":400,"height":560,"color":"3"},
@@ -43,7 +43,8 @@
 		{"id":"b91282a374730ba6","type":"text","text":"AOF优点\n+ 记录的频率高","x":460,"y":600,"width":180,"height":110,"color":"3"},
 		{"id":"4f2b06ae62cd1aaa","type":"text","text":"AOF应用\n+ 高可靠性业务\n+ 日志审计","x":1092,"y":88,"width":350,"height":112,"color":"4"},
 		{"id":"1e5f7b85df655ff2","type":"text","text":"RDB应用\n+ 大规模数据恢复（直接加载数据，快）\n+ 数据备份","x":1092,"y":-60,"width":350,"height":114,"color":"3"},
-		{"id":"9eb0c82995364d0f","type":"text","text":"# 为什么lua脚本可以实现原子性？\n+ redis单线程\n+ lua脚本一次性串行执行","x":3040,"y":-747,"width":420,"height":175,"color":"3"}
+		{"id":"9eb0c82995364d0f","type":"text","text":"# 为什么lua脚本可以实现原子性？\n+ redis单线程\n+ lua脚本一次性串行执行","x":3040,"y":-747,"width":420,"height":175,"color":"3"},
+		{"id":"609aff766f74b62b","x":920,"y":1840,"width":560,"height":200,"color":"1","type":"text","text":"**一致性哈希**\n\n主要解决：**节点增加或减少时，尽量只迁移少量数据**\n\n1. 对节点标识计算哈希，把节点放到环上。\n2. 对 Key 计算哈希，把 Key 也放到环上。\n3. 从 Key 的位置顺时针寻找，遇到的第一个节点就是它的归属节点。\n"}
 	],
 	"edges":[
 		{"id":"0261aea2593d0d6b","fromNode":"e0729096baa55ab4","fromSide":"right","toNode":"3961cae071c42d59","toSide":"left"},
@@ -84,6 +85,7 @@
 		{"id":"f23a8fb11824a8c1","fromNode":"b38298fa4ab1502b","fromSide":"bottom","toNode":"2b0ad725554333c5","toSide":"top"},
 		{"id":"15b79f12e59fca5f","fromNode":"b38298fa4ab1502b","fromSide":"right","toNode":"4f2b06ae62cd1aaa","toSide":"left"},
 		{"id":"9c1a66ba7a5949c6","fromNode":"73e724a93ebca46e","fromSide":"bottom","toNode":"1e5f7b85df655ff2","toSide":"top"},
-		{"id":"73dc49c48507fafe","fromNode":"eeb8d0d44f4765a7","fromSide":"right","toNode":"9eb0c82995364d0f","toSide":"left"}
+		{"id":"73dc49c48507fafe","fromNode":"eeb8d0d44f4765a7","fromSide":"right","toNode":"9eb0c82995364d0f","toSide":"left"},
+		{"id":"4cfdec0490b17597","fromNode":"609aff766f74b62b","fromSide":"right","toNode":"0aa149c321e3fc27","toSide":"left"}
 	]
 }

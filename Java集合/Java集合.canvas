@@ -26,8 +26,9 @@
 		{"id":"1fa7cc5c7e6a9709","type":"file","file":"Java集合/Map/HashMap/多线程hashmap问题.md","x":-3180,"y":-200,"width":520,"height":214,"color":"3"},
 		{"id":"5267970ab636a7d2","type":"file","file":"Java集合/Map/HashMap/LinkedHashMap.md","x":-3180,"y":63,"width":520,"height":110,"color":"3"},
 		{"id":"35bb0427d4b19ebf","type":"file","file":"Java集合/List/ArrayList/缺点.md","x":-3060,"y":-820,"width":400,"height":157,"color":"1"},
-		{"id":"3a300b0b0ac53939","type":"file","file":"Java集合/contains方法.md","x":-860,"y":-1140,"width":400,"height":320,"color":"1"},
-		{"id":"e5a347427a02a331","x":-3180,"y":219,"width":520,"height":169,"color":"1","type":"file","file":"Java集合/Map/HashMap/HashMap为什么要用红黑树？.md"}
+		{"id":"e5a347427a02a331","type":"file","file":"Java集合/Map/HashMap/HashMap为什么要用红黑树？.md","x":-3180,"y":219,"width":520,"height":169,"color":"1"},
+		{"id":"3a300b0b0ac53939","type":"file","file":"Java集合/contains方法.md","x":-1067,"y":-1140,"width":400,"height":320,"color":"1"},
+		{"id":"a36f006e2482c5e4","x":-580,"y":-1028,"width":400,"height":153,"color":"1","type":"file","file":"Java集合/Object有哪些方法？.md"}
 	],
 	"edges":[
 		{"id":"51e6722ac4399f8d","fromNode":"9a77fec56f16e507","fromSide":"left","toNode":"a089cdbf9c2f8457","toSide":"right"},
@@ -56,6 +57,7 @@
 		{"id":"0266b6cee5680538","fromNode":"7de03a1bebdebc77","fromSide":"left","toNode":"5267970ab636a7d2","toSide":"right"},
 		{"id":"f95e6887d8c3252f","fromNode":"9f66c594fa6391f5","fromSide":"left","toNode":"35bb0427d4b19ebf","toSide":"right"},
 		{"id":"7f29b71f6ce1d40a","fromNode":"9a77fec56f16e507","fromSide":"top","toNode":"3a300b0b0ac53939","toSide":"bottom"},
-		{"id":"84127a52d4982b28","fromNode":"7de03a1bebdebc77","fromSide":"left","toNode":"e5a347427a02a331","toSide":"right"}
+		{"id":"84127a52d4982b28","fromNode":"7de03a1bebdebc77","fromSide":"left","toNode":"e5a347427a02a331","toSide":"right"},
+		{"id":"4b8f05df963e7134","fromNode":"9a77fec56f16e507","fromSide":"top","toNode":"a36f006e2482c5e4","toSide":"bottom"}
 	]
 }

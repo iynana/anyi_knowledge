@@ -28,7 +28,9 @@
 		{"id":"277a3d53766178cb","type":"text","text":"# 中断的处理过程\n**硬件完成**：\n\n1. ==关中断==\n2. 保存断点PC\n3. 根据中断号查中断向量表进行中断服务程序寻址\n\n**中断服务程序完成**：\n\n4. 保存现场，设置中断屏蔽字\n5. ==开中断==\n6. 中断处理\n7. ==关中断==\n8. 恢复现场\n9. 中断返回","x":2520,"y":-367,"width":420,"height":435,"color":"1"},
 		{"id":"8fc72872d13aa894","type":"file","file":"操作系统/Linux/Linux常用命令.md","x":980,"y":1001,"width":400,"height":335,"color":"4"},
 		{"id":"59665e081b1a9abc","type":"file","file":"操作系统/Linux/查看磁盘空间使用率.md","x":980,"y":1420,"width":400,"height":180,"color":"4"},
-		{"id":"b5fe53c03d9068e0","type":"file","file":"操作系统/Linux/chmod 644表示什么？6 表示什么？为什么有 3 个数字？.md","x":200,"y":1001,"width":400,"height":301,"color":"4"}
+		{"id":"b5fe53c03d9068e0","type":"file","file":"操作系统/Linux/chmod 644表示什么？6 表示什么？为什么有 3 个数字？.md","x":200,"y":1001,"width":400,"height":301,"color":"4"},
+		{"id":"bdd45c6b71045898","type":"text","text":"## java进程和操作系统进程的区别，以及对应关系\n\nJava 进程本质上是一个**运行 JVM 的操作系统进程**。操作系统负责进程的资源分配和调度，而 JVM 在这个进程内部**管理 Java 堆、类元数据和 Java 线程**。通常一个 JVM 对应一个操作系统进程，一个 Java 进程内部可以包含多个 Java 线程。","x":659,"y":550,"width":572,"height":170,"color":"1"},
+		{"id":"9ab02ea40447513b","x":1260,"y":-1569,"width":500,"height":238,"color":"1","type":"text","text":"地址转换过程：\n+ 拆分为虚拟页号和页内偏移\n+ MMU 查询 TLB。若命中，直接得到物理页框号。\n+ 若未命中，查询内存中的页表。\n+ 如果页表项无效，则触发缺页异常交给操作系统处理，淘汰并分配物理页。\n+ 根据物理页框号，得出 物理页框号 + 页内偏移"}
 	],
 	"edges":[
 		{"id":"e687d21c889cc03e","fromNode":"c472dcbae4fc0e2f","fromSide":"left","toNode":"1e821f0c6873fbe4","toSide":"right"},
@@ -55,6 +57,8 @@
 		{"id":"b94dcae51503f665","fromNode":"d28354554ac3e1ce","fromSide":"left","toNode":"b5fe53c03d9068e0","toSide":"right"},
 		{"id":"6ca1f66b23f1210f","fromNode":"d28354554ac3e1ce","fromSide":"right","toNode":"8fc72872d13aa894","toSide":"left"},
 		{"id":"5d419e8402acfec7","fromNode":"320a67cafbb90988","fromSide":"right","toNode":"277a3d53766178cb","toSide":"left"},
-		{"id":"3e49f0379c418044","fromNode":"d28354554ac3e1ce","fromSide":"right","toNode":"59665e081b1a9abc","toSide":"left"}
+		{"id":"3e49f0379c418044","fromNode":"d28354554ac3e1ce","fromSide":"right","toNode":"59665e081b1a9abc","toSide":"left"},
+		{"id":"b893d5f55e081424","fromNode":"1e821f0c6873fbe4","fromSide":"bottom","toNode":"bdd45c6b71045898","toSide":"top"},
+		{"id":"ce2dd9b16666ae75","fromNode":"350f06142cc3a8a7","fromSide":"right","toNode":"9ab02ea40447513b","toSide":"left"}
 	]
 }

@@ -6,17 +6,15 @@
 		{"id":"ba6359940f964532","type":"file","file":"JUC/锁/悲观锁/悲观锁.md","x":-160,"y":50,"width":400,"height":260,"color":"3"},
 		{"id":"79d1679ccb2d6ceb","type":"file","file":"JUC/锁/原子类/原子类.md","x":890,"y":340,"width":460,"height":305,"color":"4"},
 		{"id":"0baefce26ac1e75e","type":"file","file":"JUC/锁/原子类/Unsafe.md","x":890,"y":760,"width":460,"height":200,"color":"4"},
-		{"id":"89e44fffacfedd80","type":"text","text":"**Synchronized 锁升级**\n在JDK1.6 考虑不同竞争强度的场景，对synchronized进行了优化，**无锁->偏向锁->轻量级锁(自旋锁)->重量级锁**。","x":320,"y":220,"width":500,"height":120,"color":"4"},
 		{"id":"6a91b145a6a20547","type":"file","file":"JUC/锁/悲观锁/AQS框架/AQS框架.md","x":-940,"y":-220,"width":400,"height":1020,"color":"3"},
 		{"id":"75ffaf8e34495d6e","type":"file","file":"JUC/锁/悲观锁/AQS框架/ReentrantLock.md","x":-1540,"y":160,"width":480,"height":260,"color":"4"},
 		{"id":"f819bfafac260b9c","type":"text","text":"**ReentrantLock和synchronized的区别？**\n+ 实现层次：`synchronized`基于管程实现；`ReentrantLock` 基于 CAS + AQS 实现。\n+ 锁的灵活性：`ReentrantLock` 支持公平锁、非公平锁、可中断锁、超时获取锁等高级功能；`synchronized` 只能是非公平锁，且不可中断（除非抛出异常）。\n+ 锁的释放：`synchronized` 自动释放（代码块结束或异常）；`ReentrantLock` 必须手动在 `finally` 块中调用 `unlock()` 释放，否则可能死锁。","x":-1620,"y":480,"width":640,"height":240,"color":"3"},
-		{"id":"efc3e7e5802b73ba","type":"text","text":"**Synchronized 的原理**\n`synchronized` 实际上是通过 **Monitor（管程）** 实现的\n+ 每个对象都可以关联一个 Monitor\n+ Monitor 内部结构（核心）：Owner、EntryList、WaitSet\n\n**操作系统**层面需要申请互斥量，要切换到内核态，开销大","x":320,"y":-50,"width":500,"height":200,"color":"3"},
 		{"id":"01522be86228b6f2","type":"text","text":"# 线程","x":-880,"y":2360,"width":100,"height":60},
 		{"id":"86b9e1c321c3e1a0","type":"text","text":"# 上下文切换","x":-633,"y":1560,"width":186,"height":53},
 		{"id":"bec75a19cc92b99c","type":"file","file":"JUC/线程/上下文切换/定义.md","x":-233,"y":1220,"width":520,"height":140,"color":"3"},
 		{"id":"a34bb07bf5e4a75e","type":"file","file":"JUC/线程/上下文切换/如何减少上下文切换.md","x":-233,"y":1406,"width":520,"height":360,"color":"3"},
 		{"id":"1fed54fcf8ebc762","type":"file","file":"JUC/线程/上下文切换/上下文切换时机.md","x":-233,"y":1822,"width":520,"height":478,"color":"3"},
-		{"id":"36fd0868f2a52c84","type":"file","file":"JUC/线程/JMM.md","x":-233,"y":2390,"width":520,"height":360,"color":"3"},
+		{"id":"36fd0868f2a52c84","type":"file","file":"JUC/线程/JMM/JMM.md","x":-233,"y":2390,"width":520,"height":360,"color":"3"},
 		{"id":"c474fdc166edc446","type":"text","text":"# ThreadLocal","x":-633,"y":3080,"width":213,"height":53},
 		{"id":"cf196f71071c067e","type":"file","file":"JUC/线程/ThreadLocal/ThreadLocal.md","x":-260,"y":2800,"width":653,"height":153,"color":"3"},
 		{"id":"5c53377c4cca46aa","type":"file","file":"JUC/线程/ThreadLocal/使用场景和主要作用.md","x":-260,"y":2980,"width":653,"height":480,"color":"3"},
@@ -42,7 +40,14 @@
 		{"id":"689dc698c047ebae","type":"file","file":"JUC/线程池/线程池参数/核心线程数和最大线程数怎么设定？.md","x":495,"y":1056,"width":960,"height":400,"color":"3"},
 		{"id":"003588c466e30230","type":"file","file":"JUC/线程池/线程池参数/任务拒绝策略有哪些，怎么选择？.md","x":495,"y":1536,"width":960,"height":320,"color":"3"},
 		{"id":"7a7d1a999bc33b9d","type":"file","file":"JUC/线程池/线程池参数/线程池常见参数.md","x":1575,"y":1316,"width":400,"height":360,"color":"3"},
-		{"id":"8646d5c16d8ea6f5","type":"file","file":"JUC/线程池/线程池注意点.md","x":1575,"y":1926,"width":400,"height":154,"color":"3"}
+		{"id":"8646d5c16d8ea6f5","type":"file","file":"JUC/线程池/线程池注意点.md","x":1575,"y":1926,"width":400,"height":154,"color":"3"},
+		{"id":"efc3e7e5802b73ba","type":"text","text":"**Synchronized 的原理**\n`synchronized` 实际上是通过 **Monitor（管程）** 实现的\n+ 每个对象都可以关联一个 Monitor\n+ Monitor 内部结构（核心）：Owner、EntryList、WaitSet\n\n**操作系统**层面需要申请互斥量，要切换到内核态，开销大","x":320,"y":-320,"width":500,"height":200,"color":"3"},
+		{"id":"f24d6081d6017138","type":"text","text":"**Synchronized 撤销膨胀**\n`synchronized` 锁膨胀由 **JVM 在监视器空闲时自动回收**，开发者只需正常释放锁，不能手动将重量级锁降为轻量级锁。","x":320,"y":80,"width":500,"height":120,"color":"1"},
+		{"id":"89e44fffacfedd80","type":"text","text":"**Synchronized 锁升级**\n在JDK1.6 考虑不同竞争强度的场景，对synchronized进行了优化，**无锁->偏向锁->轻量级锁(自旋锁)->重量级锁**。","x":320,"y":-70,"width":500,"height":120,"color":"4"},
+		{"id":"274a8553c172f4f2","type":"text","text":"\n**锁消除**\nJVM 的一种优化：当 JIT 编译器分析后发现某个锁保护的对象**不可能被多个线程共享**时，就会直接把这个锁去掉，避免无意义的加锁、解锁开销。","x":320,"y":220,"width":500,"height":120,"color":"1"},
+		{"id":"f676196be0f74be0","type":"file","file":"JUC/锁/悲观锁/AQS框架/ReentrantReadWriteLock.md","x":-1540,"y":-155,"width":480,"height":235,"color":"1"},
+		{"id":"7beaad34a668f9a4","type":"file","file":"JUC/线程/JMM/内存屏障的原理.md","x":500,"y":2220,"width":679,"height":320,"color":"1"},
+		{"id":"8f952892b48992c0","type":"text","text":"**ABA 问题**\n一个变量从 A 变成 B 又变回 A，CAS 只能发现当前值还是 A，却无法感知中间发生过修改，可以通过版本号解决。","x":-160,"y":860,"width":400,"height":120,"color":"1"}
 	],
 	"edges":[
 		{"id":"79e30bb9bc821b60","fromNode":"16ec77a3177512bf","fromSide":"right","toNode":"8f10d1798a242ef2","toSide":"left"},
@@ -85,6 +90,11 @@
 		{"id":"7bcb40887cbaaac9","fromNode":"6c961bda4e372b2b","fromSide":"right","toNode":"df270cad16345dde","toSide":"left"},
 		{"id":"5aad5e521a44557a","fromNode":"75fbfad657284ed7","fromSide":"left","toNode":"b5647a52e4cbb771","toSide":"right"},
 		{"id":"e3c769a0e32828d3","fromNode":"01522be86228b6f2","fromSide":"left","toNode":"b4e17104b3020984","toSide":"right"},
-		{"id":"6de47048899508a7","fromNode":"8d438ee3e0d270cb","fromSide":"left","toNode":"8646d5c16d8ea6f5","toSide":"right"}
+		{"id":"6de47048899508a7","fromNode":"8d438ee3e0d270cb","fromSide":"left","toNode":"8646d5c16d8ea6f5","toSide":"right"},
+		{"id":"888caac7598cebb2","fromNode":"ba6359940f964532","fromSide":"right","toNode":"f24d6081d6017138","toSide":"left"},
+		{"id":"d649091827579798","fromNode":"ba6359940f964532","fromSide":"right","toNode":"274a8553c172f4f2","toSide":"left"},
+		{"id":"d5905e9c3257a03d","fromNode":"6a91b145a6a20547","fromSide":"left","toNode":"f676196be0f74be0","toSide":"right"},
+		{"id":"6f767b0b8f5e0440","fromNode":"36fd0868f2a52c84","fromSide":"right","toNode":"7beaad34a668f9a4","toSide":"left"},
+		{"id":"5f90006b140c8511","fromNode":"0b6982cd554b66fd","fromSide":"left","toNode":"8f952892b48992c0","toSide":"right"}
 	]
 }
