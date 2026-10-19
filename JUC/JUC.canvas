@@ -5,7 +5,7 @@
 		{"id":"16ec77a3177512bf","type":"text","text":"# 锁","x":-360,"y":310,"width":65,"height":60},
 		{"id":"ba6359940f964532","type":"file","file":"JUC/锁/悲观锁/悲观锁.md","x":-160,"y":50,"width":400,"height":260,"color":"3"},
 		{"id":"79d1679ccb2d6ceb","type":"file","file":"JUC/锁/原子类/原子类.md","x":890,"y":340,"width":460,"height":305,"color":"4"},
-		{"id":"0baefce26ac1e75e","type":"file","file":"JUC/锁/原子类/Unsafe.md","x":890,"y":760,"width":460,"height":200,"color":"4"},
+		{"id":"0baefce26ac1e75e","type":"file","file":"JUC/锁/原子类/Unsafe.md","x":890,"y":700,"width":460,"height":280,"color":"4"},
 		{"id":"6a91b145a6a20547","type":"file","file":"JUC/锁/悲观锁/AQS框架/AQS框架.md","x":-940,"y":-220,"width":400,"height":1020,"color":"3"},
 		{"id":"75ffaf8e34495d6e","type":"file","file":"JUC/锁/悲观锁/AQS框架/ReentrantLock.md","x":-1540,"y":160,"width":480,"height":260,"color":"4"},
 		{"id":"f819bfafac260b9c","type":"text","text":"**ReentrantLock和synchronized的区别？**\n+ 实现层次：`synchronized`基于管程实现；`ReentrantLock` 基于 CAS + AQS 实现。\n+ 锁的灵活性：`ReentrantLock` 支持公平锁、非公平锁、可中断锁、超时获取锁等高级功能；`synchronized` 只能是非公平锁，且不可中断（除非抛出异常）。\n+ 锁的释放：`synchronized` 自动释放（代码块结束或异常）；`ReentrantLock` 必须手动在 `finally` 块中调用 `unlock()` 释放，否则可能死锁。","x":-1620,"y":480,"width":640,"height":240,"color":"3"},

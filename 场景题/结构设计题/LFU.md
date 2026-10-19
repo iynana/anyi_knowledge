@@ -17,4 +17,4 @@ int minFreq;
 
 
 一句话面试版：
-> **LFU 查询时通过 HashMap O(1) 找节点并将其从 `freq` 桶移动到 `freq + 1` 桶；写入时如果容量满，就从 `minFreq` 桶尾部淘汰节点，再以 `freq=1` 插入新节点，因此 get 和 put 都能做到 O(1)。**
+> **LFU 查询时通过 HashMap O(1) 找节点并将其从 `freq` 桶移动到 `freq + 1` 桶；写入时如果容量满，就从 `minFreq` 桶尾部淘汰节点，再以 `freq=1` 插入新节点，因此 get 和 put 都能做到 O(1)。**x
